@@ -13,22 +13,17 @@ public class Boj10818 {
 
         for (int i = 0; i < test.length; i++) {
             test[i] = sc.nextInt();
-            min = test[0];
-            max = test[0];
+        }
+        max = min = test[0];	// 배열의 첫번째 값을 최소값 및 최대값으로 지정
 
-            if(i>0){
-                if(max < test[i]){
-                    max = test[i];
-                }
-                if(min > test[i]){
-                    min = test[i];
-                }
-
-            }
+        for(int i=1; i<test.length; i++) {	// 배열의 두번째 값부터 마지막 값까지 비교
+            if(test[i] > max)
+                max = test[i];
+            if(test[i] < min)
+                min = test[i];
         }
 
-        System.out.println(max);
-        System.out.println(min);
+        System.out.print(min+" "+max);
 
 
     }
