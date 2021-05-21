@@ -1,4 +1,4 @@
-package test;
+package implementation;
 
 public interface WashingMachine {
     public void startButtonPressed();

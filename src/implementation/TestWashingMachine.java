@@ -1,4 +1,4 @@
-package test;
+package implementation;
 
 public class TestWashingMachine {
     public static void main(String[] args) {
