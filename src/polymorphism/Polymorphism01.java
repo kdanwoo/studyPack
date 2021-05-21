@@ -10,5 +10,8 @@ public class Polymorphism01 {
         Dog dog = new Dog();
         Animal animal1 =  new Dog();
         //Dog dog1 = new Animal(); 오류발생
+
+
+
     }
 }
