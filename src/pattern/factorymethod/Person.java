@@ -7,6 +7,6 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "NAME="+this.getName()+", AGE="+this.getAge()+", SEX="+this.getSex();
+        return "NAME="+this.getName()+", AG!E="+this.getAge()+", SEX="+this.getSex();
     }
 }
