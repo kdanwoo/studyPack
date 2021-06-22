@@ -6,23 +6,21 @@ import java.util.Map;
 
 class SolutionHashTelephone{
     public boolean solution(String[] phone_book) {
-        int count = 0;
+        boolean answer = true;
         Map<String, String> map = new HashMap<>();
 
         for(String num : phone_book){
-            map.put("map",num);
+            map.put(num,num);
         }
 
-        for(int i=0; i<phone_book.length-1 ; i++){
-            for(int j=1 ; j<phone_book.length ; j++){
-                //찾기
-                
+        for(String num : phone_book){
+            for(int i=0 ; i<num.length(); i++) {
+                if( map.containsKey(num.substring(0,i)) ) {
+                    return false;
+                }
             }
         }
 
-
-
-        boolean answer = true;
         return answer;
     }
 }
