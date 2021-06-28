@@ -25,7 +25,7 @@ public class BFS_List {
             int v2 = sc.nextInt();
             adjList[v1].add(v2);
             adjList[v2].add(v1);
-        }
+        } //중복해서 입력하는건 아님!
 
         for (int i = 1; i <= n; i++) {
             Collections.sort(adjList[i]); // 방문 순서를 위해 오름차순 정렬
@@ -47,10 +47,10 @@ public class BFS_List {
 
             Iterator<Integer> iter = adjList[v].listIterator();
             while(iter.hasNext()) {
-                int w = iter.next();
-                if(!visited[w]) {
-                    visited[w] = true;
-                    queue.add(w);
+                int w = iter.next(); //인접 값
+                if(!visited[w]) { //방문한적이 없다면
+                    visited[w] = true; //방문체크를 하고
+                    queue.add(w); // 큐에 넣어준다
                 }
             }
         }
